@@ -241,10 +241,10 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
 	          ]) {
 
 	            sh '''
-                 git config --global user.name "devopseasylearning"
+                 git config --global user.name "vidalgithub"
                  git config --global user.email info@devopseasylearning.com
                 rm -rf s3-pipeline-practise || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise.git
+                git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise.git
                 cd s3-pipeline-practise/CHARTS/
 cat <<EOF > dev-values.yaml           
         image:
