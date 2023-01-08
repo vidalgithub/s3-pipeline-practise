@@ -73,7 +73,7 @@ options {
 stage('permission') {
             steps {
                 sh '''
-cat permission.txt | grep -o $USER
+cat permission.txt | grep -x $USER
 echo $?
 
                 '''
