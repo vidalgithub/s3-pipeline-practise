@@ -241,8 +241,8 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
 	          ]) {
 
 	            sh '''
-                 git config --global user.name "vidalgithub"
-                 git config --global user.email vidalngka@gmail.com
+                git config --global user.name "vidalgithub"
+                git config --global user.email vidalngka@gmail.com
                 rm -rf s3-pipeline-practise--charts || true
                 git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git
                 cd s3-pipeline-practise--charts 
@@ -266,7 +266,7 @@ EOF
                 git add -A 
                 git commit -m "testing jenkins"
                 git push https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git || true
-		cat dev-values.yaml
+		
 	            '''
 	          }
 
@@ -289,10 +289,10 @@ EOF
 	          ]) {
 
 	            sh '''
-                 git config --global user.name "devopseasylearning"
-                 git config --global user.email info@devopseasylearning.com
+                git config --global user.name "vidalgithub"
+                git config --global user.email vidalngka@gmail.com
                 rm -rf s3-pipeline-practise--charts || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git
+                git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git
                 cd s3-pipeline-practise--charts
 		
 cat <<EOF > sanbox-values.yaml           
@@ -312,7 +312,7 @@ cat <<EOF > sanbox-values.yaml
 EOF
                 git add -A 
                 git commit -m "testing jenkins"
-                git push https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git  || true
+                git push https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git || true
 
 	            '''
 	          }
@@ -337,10 +337,10 @@ EOF
 	          ]) {
 
 	            sh '''
-                 git config --global user.name "devopseasylearning"
-                 git config --global user.email info@devopseasylearning.com
+                git config --global user.name "vidalgithub"
+                git config --global user.email vidalngka@gmail.com
                 rm -rf s3-pipeline-practise--charts || true
-                git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git
+                git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git
                 cd s3-pipeline-practise--charts
 cat <<EOF > prod-values.yaml           
         image:
@@ -359,7 +359,7 @@ cat <<EOF > prod-values.yaml
 EOF
                 git add -A 
                 git commit -m "testing jenkins"
-                git push https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git  || true
+                git push https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git || true
 
 	            '''
 	          }
