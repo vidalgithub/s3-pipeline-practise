@@ -246,9 +246,7 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
                 rm -rf s3-pipeline-practise--charts || true
                 git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git
                 cd s3-pipeline-practise--charts 
-		cat dev-values.yaml
-		rm -f dev-values.yaml || true
-		ls
+		
 		
 cat <<EOF > dev-values.yaml           
         image:
