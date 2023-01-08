@@ -246,6 +246,7 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
                 rm -rf s3-pipeline-practise--charts || true
                 git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git
                 cd s3-pipeline-practise--charts 
+		cat dev-values.yaml
 		
 cat <<EOF > dev-values.yaml           
         image:
@@ -265,7 +266,7 @@ EOF
                 git add -A 
                 git commit -m "testing jenkins"
                 git push https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git || true
-
+		cat dev-values.yaml
 	            '''
 	          }
 
