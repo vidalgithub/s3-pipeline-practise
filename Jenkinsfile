@@ -245,7 +245,7 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
                  git config --global user.email info@devopseasylearning.com
                 rm -rf s3-pipeline-practise--charts || true
                 git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git
-                cd s3-pipeline-practise--charts
+                cd s3-pipeline-practise/CHARTS/
 cat <<EOF > dev-values.yaml           
         image:
           db:
