@@ -73,7 +73,7 @@ options {
 stage('permission') {
             steps {
                 sh '''
-cat permission.txt | grep -x $USER
+cat permission.txt | grep -o $USER
 echo $?
 
                 '''
@@ -237,15 +237,16 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
 	      steps {
 	        script {
 	          withCredentials([
-	            string(credentialsId: 'eric-image', variable: 'TOKEN')
+	            string(credentialsId: 'kemgou-token', variable: 'TOKEN')
 	          ]) {
 
 	            sh '''
                  git config --global user.name "vidalgithub"
-                 git config --global user.email info@devopseasylearning.com
-                rm -rf s3-pipeline-practise || true
-                git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise.git
-                cd s3-pipeline-practise/CHARTS/
+                 git config --global user.email vidalngka@gmail.com
+                rm -rf s3-pipeline-practise--charts || true
+                git clone  https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git
+                cd s3-pipeline-practise--charts 
+		
 cat <<EOF > dev-values.yaml           
         image:
           db:
@@ -263,7 +264,7 @@ cat <<EOF > dev-values.yaml
 EOF
                 git add -A 
                 git commit -m "testing jenkins"
-                git push https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git || true
+                git push https://vidalgithub:$TOKEN@github.com/vidalgithub/s3-pipeline-practise--charts.git || true
 
 	            '''
 	          }
