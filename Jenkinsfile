@@ -237,12 +237,12 @@ docker push devopseasylearning2021/s4-weather:${BUILD_NUMBER}-$WEATHERTag
 	      steps {
 	        script {
 	          withCredentials([
-	            string(credentialsId: 'eric-image', variable: 'TOKEN')
+	            string(credentialsId: 'kemgou-token', variable: 'TOKEN')
 	          ]) {
 
 	            sh '''
-                 git config --global user.name "devopseasylearning"
-                 git config --global user.email info@devopseasylearning.com
+                 git config --global user.name "vidalgithub"
+                 git config --global user.email vidalngka@gmail.com
                 rm -rf s3-pipeline-practise--charts || true
                 git clone  https://devopseasylearning:$TOKEN@github.com/devopseasylearning/s3-pipeline-practise--charts.git
                 cd s3-pipeline-practise--charts 
